@@ -111,5 +111,49 @@ int main(){
   printf("Item 2: $%8.2f\n", item2);
   printf("Item 3: $%-8.2f\n", item3);
 
+  printf("\n\n==== Constants ====\n\n");
+
+  const float PI = 3.14159; // just add the const key word before the variable's type.
+
+  // PI = 520.69; // This way the PI cannot be assigned twice.
+
+  printf("%f", PI);
+
+  printf("\n\n==== Arithmetic Operators ====\n\n");
+
+  // + (addition)
+  // - (subtraction)
+  // * (multiplication)
+  // / (division)
+  // % (modulus)
+  // ++ (increment)
+  // -- (decrement)
+
+  int w = 5;
+  float z = 2;
+
+  z++; // incrementing
+
+  printf("Z value -> %.1f\n", --z);  // decrementing prior to print
+
+  float p = w / z; // here we need the p variable be float and the divisor z be float too.
+  // only this way the p variable will hold the exact division of 5 / 2 = 2.5
+
+  // if the division occurs with the z being an integer the result will be 2
+  // The same will happen if the p variable be an integer.
+
+  // Another way to take around this is to cast the variable z. That means we'll change the type of z
+  // only in the moment we need that happens, without change the original type. Something like:
+
+  float p2 = w / (float) z;
+
+  printf("Division of p: (%d / %d) -> %.2f\n", w, z, p);
+  printf("Division of p2: (%d / %d) -> %.2f\n", w, z, p2);
+
+  int n1 = 13;
+  n1 %= 2;
+
+  printf("Remainder of n1: %d", n1);
+
   return 0;
 }
