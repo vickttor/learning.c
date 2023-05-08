@@ -26,11 +26,6 @@ int main() {
   printf("sin(45) -> %lf\n", I);
   printf("cos(45) -> %lf\n", J);
   printf("tan(45) -> %lf\n", K);
-
-
-
-
-
-
+  
   return 0;
 }
