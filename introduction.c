@@ -61,6 +61,18 @@ int main(){
   int a = 2147483646;            // 4 bytes (-2,147,483,648 to +2,147,483,647) %d
   unsigned int k = 4294967295L;  // 4 bytes (0 to +4,294,967,295) %u
  
+  /**
+   * ints are considered long type integers. That means we don't need to explicitly specify 
+   * the long key word before the int type. But since we want to increase the range
+   * we can apply the the value long long to transform the int into a number of 8 bytes;
+   * 
+  */
+
+ long long int l  =  -9223372036854775807; // %lld
+ unsigned long long int m  = 18446744073709551615U; //%llu
+
+ // To render the m variable above without warns, we add a U to the end of the long long integers.
+
   printf("%c\n", c);
   printf("%s\n", str);
   printf("%f\n", f);
@@ -72,6 +84,32 @@ int main(){
   printf("%d\n", a);
   printf("%u\n", k);
 
+  // Long numbers;
+
+  printf("%lld\n", l);
+  printf("%llu\n", m);
+
+  printf("\n\n==== Format Specifiers ====\n\n");
+
+  // format specifier % = defines and formats a type data to be displayed;
+
+  // %c = character
+  // %s = string (array of characters)
+  // %f = float
+  // %lf = double (long float)
+  // %d = integer
+
+  // %.1 = decimal precison
+  // %1 minimum field width
+  // %- left align
+
+  float item1 = 5.75;
+  float item2 = 10.00;
+  float item3 = 100.99;
+
+  printf("Item 1: $%-8.2f\n", item1);
+  printf("Item 2: $%8.2f\n", item2);
+  printf("Item 3: $%-8.2f\n", item3);
 
   return 0;
 }
