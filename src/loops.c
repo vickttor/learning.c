@@ -35,6 +35,31 @@ int main() {
   } while(strlen(name) == 0);
 
   printf("\nHello %s\n", name);
+  
+  printf("\n\n==== Nested Loops ====\n");
+  // nested loop = loop inside of another loop
+
+  int rows;
+  int cols;
+  char symbol;
+
+  printf("Enter a # of rows: ");
+  scanf("%d", &rows);
+
+  printf("Enter a # of cols: ");
+  scanf("%d", &cols);
+
+  scanf("%c"); // cleaning the buffer to get the \n
+
+  printf("Enter a symbol to use: ");
+  scanf("%c", &symbol);
+
+  for(int i = 0; i <= rows; i++) {
+    for(int j = 1; j <= cols; j++) {
+      printf("%c", symbol);
+    }
+    printf("\n");
+  }
 
 
 
